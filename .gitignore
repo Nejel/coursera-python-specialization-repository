@@ -1,5 +1,1 @@
 $ cat .gitignore
-# exclude everything except directory foo/bar
-\5-retrieving-processing-and-visualizing-data\2-retrieving\index.sqlite
-\5-retrieving-processing-and-visualizing-data\2-retrieving\contentold.sqlite
-\5-retrieving-processing-and-visualizing-data\2-retrieving\content.sqlite
