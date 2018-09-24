@@ -20,7 +20,12 @@ def translate(w):
         return "Nope, that's not working"
 
 word = input("Enter word: ")
-print(translate(word))
 
+printed = translate(word))
 
+if type(printed) == list():
+    for i in printed:
+        print(i)
+else:
+    print(output)
 
