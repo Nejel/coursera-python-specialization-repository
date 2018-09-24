@@ -9,23 +9,22 @@ def translate(w):
     if w in data:
         return data[w]
     elif len(get_close_matches(w, data.keys())) > 0:
-        yn = "Did you mean %s instead? Enter Y if yes and N if no: " % get_close_matches(w, data.keys())[0] #first element of closest match
+        yn = input("Did you mean %s instead? Enter Y if yes and N if no: " % get_close_matches(w, data.keys())[0]) #first element of closest match
         if yn == "Y":
             return data[get_close_matches(w, data.keys())[0]]
         elif yn == "N":
-            rerutn "The word doesn't exist. Please double check it."
+            return "The word doesn't exist. Please double check it."
         else:
             return "We didn't understand your entry."
     else:
         return "Nope, that's not working"
 
 word = input("Enter word: ")
+printed = translate(word)
 
-printed = translate(word))
-
-if type(printed) == list():
+#чтобы определения были на двух разых строчках
+if type(printed) == list:
     for i in printed:
         print(i)
 else:
-    print(output)
-
+    print(printed)
