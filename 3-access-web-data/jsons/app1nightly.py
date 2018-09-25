@@ -19,12 +19,17 @@ def translate(w):
     else:
         return "Nope, that's not working"
 
-word = input("Enter word: ")
-printed = translate(word)
+while True:
+    word = input("Enter word: ")
+    printed = translate(word)
 
-#чтобы определения были на двух разых строчках
-if type(printed) == list:
-    for i in printed:
-        print(i)
-else:
-    print(printed)
+    #чтобы определения были на двух разых строчках
+    if type(printed) == list:
+        for i in printed:
+            print(i)
+    else:
+        print(printed)
+
+    yn = input("Repeat? (Enter -- Yes / N -- No)")
+    if yn == "N":
+        break
